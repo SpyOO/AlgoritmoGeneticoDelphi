@@ -1,0 +1,151 @@
+object FAG: TFAG
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  Caption = 'TSP - Algoritmo gen'#233'tico'
+  ClientHeight = 556
+  ClientWidth = 828
+  Position = MainFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object lay_controls: TLayout
+    Align = Right
+    Position.X = 632.000000000000000000
+    Size.Width = 196.000000000000000000
+    Size.Height = 556.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Rectangle1: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Size.Width = 196.000000000000000000
+      Size.Height = 556.000000000000000000
+      Size.PlatformDefault = False
+      object BtnClean: TButton
+        Position.X = 24.000000000000000000
+        Position.Y = 275.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Limpiar'
+        OnClick = BtnCleanClick
+      end
+      object BtnGenerar: TButton
+        Position.X = 24.000000000000000000
+        Position.Y = 193.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Generar poblaci'#243'n'
+        OnClick = BtnGenerarClick
+      end
+      object GrpConfig: TGroupBox
+        StyledSettings = [Family, Size, FontColor, Other]
+        Position.X = 8.000000000000000000
+        Position.Y = 24.000000000000000000
+        Size.Width = 180.000000000000000000
+        Size.Height = 161.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Configuraci'#243'n:'
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        TabOrder = 3
+        object edtPoblacion: TSpinBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 39
+          Cursor = crIBeam
+          DecimalDigits = 0
+          Min = 1.000000000000000000
+          Max = 50000.000000000000000000
+          Value = 1000.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 49.000000000000000000
+        end
+        object Label1: TLabel
+          Position.X = 16.000000000000000000
+          Position.Y = 24.000000000000000000
+          Text = 'Poblaci'#243'n:'
+          TabOrder = 41
+        end
+        object Label2: TLabel
+          Position.X = 16.000000000000000000
+          Position.Y = 88.000000000000000000
+          Text = 'Mutaci'#243'n:'
+          TabOrder = 40
+        end
+        object edtMutacion: TSpinBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 38
+          Cursor = crIBeam
+          DecimalDigits = 0
+          Value = 100.000000000000000000
+          Position.X = 16.000000000000000000
+          Position.Y = 113.000000000000000000
+        end
+      end
+      object btnIniciar: TButton
+        Enabled = False
+        Position.X = 24.000000000000000000
+        Position.Y = 234.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Iniciar'
+        OnClick = btnIniciarClick
+      end
+      object txt_ciudad: TText
+        Position.X = 24.000000000000000000
+        Position.Y = 344.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        Text = '0 ciudades'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+      end
+      object Txt_distancia: TText
+        Position.X = 24.000000000000000000
+        Position.Y = 416.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        Text = '0 Km'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+      end
+      object TxtGeneracion: TText
+        Position.X = 24.000000000000000000
+        Position.Y = 472.000000000000000000
+        Size.Width = 121.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        Text = '0 Generaciones'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+      end
+    end
+  end
+  object lay_image: TLayout
+    Align = Client
+    Size.Width = 632.000000000000000000
+    Size.Height = 556.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Img_board: TImage
+      MultiResBitmap = <
+        item
+        end>
+      Align = Client
+      Size.Width = 632.000000000000000000
+      Size.Height = 556.000000000000000000
+      Size.PlatformDefault = False
+      WrapMode = Original
+      OnMouseDown = Img_boardMouseDown
+    end
+  end
+end
